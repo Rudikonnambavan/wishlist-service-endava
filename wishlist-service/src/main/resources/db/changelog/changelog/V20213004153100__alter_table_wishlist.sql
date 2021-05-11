@@ -1,0 +1,10 @@
+ALTER TABLE wishlist
+    ALTER COLUMN id TYPE BIGINT;
+
+CREATE SEQUENCE IF NOT EXISTS wishlist_seq
+    START 4;
+
+ALTER TABLE wishlist
+    ALTER COLUMN id SET DEFAULT nextval('wishlist_seq');
+ALTER TABLE wishlist
+    ALTER COLUMN id SET NOT NULL;
