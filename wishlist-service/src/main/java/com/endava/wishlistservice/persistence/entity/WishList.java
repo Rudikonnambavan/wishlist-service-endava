@@ -34,5 +34,5 @@ public class WishList {
     private PrivacyType privacyType;
 
     @Enumerated(EnumType.STRING)
-    private EventType type;
+    private EventType eventType;
 }

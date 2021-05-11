@@ -32,7 +32,7 @@ public final class WishListConverterUtils {
         return WishList.builder()
                 .title(wishListDetailsDto.getTitle())
                 .description(wishListDetailsDto.getDescription())
-                .type(getEventTypeIfPresent(wishListDetailsDto.getEventType()))
+                .eventType(getEventTypeIfPresent(wishListDetailsDto.getEventType()))
                 .privacyType(getPrivacyTypeIfPresent(wishListDetailsDto.getPrivacyType()))
                 .wishListDate(Objects.requireNonNullElseGet(wishListDetailsDto.getWishListDate(), LocalDateTime::now))
                 .build();
